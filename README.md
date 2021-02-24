@@ -57,7 +57,7 @@ afin de compiler les noeuds, on peut proceder avec:
  
 	 aller dans le dossier catkin_ws: 'cd catkin_ws'
 
-	 sourcer: ' sourcer le devel/setup.bash'
+	 sourcer: ' source le devel/setup.bash'
 	 
  	 executer: 'rosrun tp_ros_ialy pub.py'
 
@@ -76,7 +76,7 @@ afin de compiler les noeuds, on peut proceder avec:
   
 	aller dans le dossier catkin_ws: 'cd catkin_ws'
   
-	sourcer: ' sourcer le devel/setup.bash'
+	sourcer: ' source le devel/setup.bash'
 	
 
  
@@ -121,7 +121,7 @@ en cas de probleme sur le 3e terminal, il y une non-correspondance sur le topic(
  
 	aller dans le dossier catkin_ws: 'cd catkin_ws'
  
-	sourcer: ' sourcer le devel/setup.bash'
+	sourcer: ' source le devel/setup.bash'
  
 	executer : ' rosrun rviz rviz '
   
@@ -146,7 +146,7 @@ Afin de resumer l execution sur le 'rosrun', le roslauch peut facilite  la tache
   
  	aller dans le dossier catkin_ws: 'cd catkin_ws'
   
-	sourcer: ' sourcer le devel/setup.bash'
+	sourcer: ' source le devel/setup.bash'
 
 	executer : ' roslaunch tp_ros_ialy ialy.launch'
 
