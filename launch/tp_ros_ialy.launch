@@ -6,6 +6,8 @@
 	
 		<remap from="PoseStamped_sub" to="button_state"/>
 	</node>
+	
+	<node pkg="rviz" name="rviz" type="rviz" args="-d $(find tp_ros_ialy)/rviz/tp_ros_ialy.rviz" />
 
 </launch>
 		

@@ -3,7 +3,7 @@
 
 Mon package contient deux noeuds ( publisher et subscriber)
 
-Et que le but de ce projet est de suivre la trajectoire d ' un huit ( visualiser sur rviz ) en utilisant posStamped a 15hz
+Et que le but de ce projet est de suivre la trajectoire d' un huit ( visualiser sur rviz ) en utilisant posStamped a 15hz mais avec l interface graphiqye toggle, tu peux l'arreter un appyant
 
 # Installation
 
@@ -34,13 +34,13 @@ afin de compiler les noeuds, on peut proceder avec:
  
  ### 1er terminal 
  
- lancement du serve
+ lancement du server
  
  
  
-	Ouvrez un premier terminal: 'ctrl + alt + t ' 
+	Ouvrez un premier terminal: ctrl + alt + t  
 
-	lancer le roscore: 'roscore'
+	lancer le roscore: roscore
 
 
 
@@ -49,17 +49,17 @@ afin de compiler les noeuds, on peut proceder avec:
 
  ### 2e terminal 
  
- execution du publisher
+ execution du publisher(button gui) et sort un interface graphique toggle
  
  
 
-	 Ouvrez un autre  terminal: 'ctrl + alt + t ' 
+	 Ouvrez un autre  terminal: ctrl + alt + t 
  
-	 aller dans le dossier catkin_ws: 'cd catkin_ws'
+	 aller dans le dossier catkin_ws: cd catkin_ws'
 
-	 sourcer: ' source le devel/setup.bash'
+	 sourcer:  source le devel/setup.bash
 	 
- 	 executer: 'rosrun tp_ros_ialy pub.py'
+ 	 executer: rosrun tp_ros_ialy button_node.py
 
 
 
@@ -68,24 +68,17 @@ afin de compiler les noeuds, on peut proceder avec:
 
  ### 3e terminal 
  
-  execution du subcriber ou lire les topic publier 
+  execution du subcriber(PoseStamped) 
  
 
  
- 	Ouvrez un autre  terminal: 'ctrl + alt + t ' 
+ 	Ouvrez un autre  terminal: ctrl + alt + t  
   
 	aller dans le dossier catkin_ws: 'cd catkin_ws'
   
-	sourcer: ' source le devel/setup.bash'
-	
+	sourcer:  source le devel/setup.bash
 
- 
- 
- *** 1er cas ***
-
-
-
-	executer: 'rosrun tp_ros_ialy sub.py'
+	executer: rosrun tp_ros_ialy PoseStamped
 
 
 
@@ -96,16 +89,7 @@ en cas de probleme sur le 3e terminal, il y une non-correspondance sur le topic(
 
 
 
-	dans le "3e terminal": 'rosrun tp_ros_ialy sub.py topic_sub:=topic_pub'
-
-
-
-
-  *** 2e cas ***
- 
- 
-	executer: 'rostopic echo /topic_pub'
-
+	dans le "3e terminal": rosrun tp_ros_ialy PoseStampedpy PoseStamped_sub:=button_state
 
 
 
@@ -117,19 +101,19 @@ en cas de probleme sur le 3e terminal, il y une non-correspondance sur le topic(
  
 
  
-	Ouvrez un autre  terminal: 'ctrl + alt + t ' 
+	Ouvrez un autre  terminal: ctrl + alt + t  
  
-	aller dans le dossier catkin_ws: 'cd catkin_ws'
+	aller dans le dossier catkin_ws: cd catkin_ws
  
-	sourcer: ' source le devel/setup.bash'
+	sourcer: source le devel/setup.bash
  
-	executer : ' rosrun rviz rviz '
+	executer :  rosrun rviz rviz 
   
-	clicker sur : "add" -> "by topic" ->  'pose'(sur /topic_pub) -> ok
+	clicker sur : "add" -> "by topic" ->  'pose'(sur /tp_note) -> ok
   
   
   
-  en resultat, vous voyer le pose fait un trajectoire d un huit (8)
+  en resultat, vous voyer le pose fait un trajectoire d un huit (8) et ppeux etre arreter par l inetrface graphique
   
  
  
@@ -142,16 +126,19 @@ Afin de resumer l execution sur le 'rosrun', le roslauch peut facilite  la tache
 
 
 
-  	Ouvrez un autre  terminal: 'ctrl + alt + t ' 
+  	Ouvrez un autre  terminal: ctrl + alt + t  
   
- 	aller dans le dossier catkin_ws: 'cd catkin_ws'
+ 	aller dans le dossier catkin_ws: cd catkin_ws
   
-	sourcer: ' source le devel/setup.bash'
+	sourcer:  source le devel/setup.bash
 
-	executer : ' roslaunch tp_ros_ialy ialy.launch'
+	executer :  roslaunch tp_ros_ialy tp_ros_ialy.launch
 
 
 
   en resultat, vous voyer le pose fait un trajectoire d un huit ( la meme que l execution sur le rosrun )
   
-  
+ 
+ # astuce
+ 
+ appuyer deux fois sur l interface graphique pour regarder l evolution sur rviz
