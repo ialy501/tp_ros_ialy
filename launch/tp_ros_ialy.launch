@@ -1,0 +1,12 @@
+<launch>
+	
+	<node pkg="tp_ros_ialy" name="button" type="button_node.py"/>
+ 		
+	<node pkg="tp_ros_ialy" name="PoseStamped" type="PoseStamped.py" output="screen">
+	
+		<remap from="PoseStamped_sub" to="button_state"/>
+	</node>
+
+</launch>
+		
+		

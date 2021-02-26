@@ -1,11 +1,13 @@
 <launch>
 	
-	<node pkg="tp_ros_ialy" name="button" type="button_node.py"/>
+	<node pkg="tp_ros_ialy" name="pub" type="pub.py"/>
  		
-	<node pkg="tp_ros_ialy" name="PoseStamped" type="PoseStamped.py" output="screen">
+	<node pkg="tp_ros_ialy" name="sub" type="sub.py" output="screen">
 	
-		<remap from="PoseStamped_sub" to="button_state"/>
+		<remap from="topic_sub" to="topic_pub"/>
 	</node>
+	
+	<node pkg="rviz" name="rviz" type="rviz" args="-d $(find tp_ros_ialy)/rviz/ialy.rviz" />
 
 </launch>
 		
